@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Gadugi';
+  src: url('./fonts/gadugi-bold.ttf');
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Gadugi';
+  color: white;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/bg-nh.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+h1 {
+  text-align: center;
+  padding: 0 15px;
+  font-size: 1.5rem;
+  animation: blink 2.25s infinite;
+
+  @media (max-width: 425px) {
+    font-size: 18px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
